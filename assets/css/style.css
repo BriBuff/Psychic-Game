@@ -1,0 +1,10 @@
+body {
+    background: black;
+    color: purple;
+    font-family: 'Merienda', cursive;
+    text-align: center;
+}
+
+.crystalball { 
+    border: 7px solid purple; 
+}
