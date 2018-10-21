@@ -4,7 +4,8 @@ var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 //It really doesn't know which one to pick. Try changing the other variables as well; make unique variables the counters AND the elements. 
 var numWins = 0;
 var numlosses = 0;
-var numberGuesses = 9;
+var numberGuessesMax = 9;
+var guessLeft
 
 var directions= document.getElementById("directions");
 var wins = document.getElementById("wins");
@@ -16,19 +17,29 @@ var userGuesses = document.getElementById("userGuesses");
 document.onkeyup = function (event) {
     var userGuess = event.key;
     var computerGuess = letters[Math.floor(Math.random() * letters.length)];
+    guessLeft = numberGuessesMax;
 
+    for (i = 0; i < 9; i++) {
     if (userGuess === computerGuess) {
         numWins++;
     }
-    else if (userGuess === 0) {
-        guesses--; 
+
+    else if (userGuess !== computerGuess) {
+        guessLeft -= 1;
+    }
+
+
+    if (guessLeft === 0) {
         numlosses++;
     }
+
 
     directions.textContent = "";
     wins.textContent = "Wins: " + numWins;
     losses.textContent = "Losses: " + numlosses;
-    guesses.textContent = "Number of guesses left: " + numberGuesses;
+    guesses.textContent = "Number of guesses left: " + guessLeft;
     userGuesses.textContent = "You guessed: " + userGuess;
+
+};
 
 };
