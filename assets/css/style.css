@@ -6,5 +6,8 @@ body {
 }
 
 .crystalball { 
-    border: 7px solid purple; 
+        border: 7px solid purple; 
+        width: 300px;
+        height: 400px;
+        object-fit: contain;
 }

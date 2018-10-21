@@ -6,6 +6,7 @@ var numWins = 0;
 var numlosses = 0;
 var numberGuesses = 9;
 
+var directions= document.getElementById("directions");
 var wins = document.getElementById("wins");
 var losses = document.getElementById("losses");
 var guesses = document.getElementById("numberGuesses");
@@ -20,9 +21,11 @@ document.onkeyup = function (event) {
         numWins++;
     }
     else if (userGuess === 0) {
+        guesses--; 
         numlosses++;
     }
 
+    directions.textContent = "";
     wins.textContent = "Wins: " + numWins;
     losses.textContent = "Losses: " + numlosses;
     guesses.textContent = "Number of guesses left: " + numberGuesses;
