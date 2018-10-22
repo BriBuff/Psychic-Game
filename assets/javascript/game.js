@@ -1,19 +1,17 @@
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-//letters gots to be strings /\ /\  Also, I'm not having a problem with linking the game.js file. Sorry :(
-//You defined 'wins' as a variable twice, once as a number and once as a DOM element (lines 4 & 8) - 
-//It really doesn't know which one to pick. Try changing the other variables as well; make unique variables the counters AND the elements. 
+ 
 var numWins = 0;
 var numlosses = 0;
 var numberGuessesMax = 9;
-var guessLeft, letterGuess
+var guessLeft, guessLetters
 
 var directions= document.getElementById("directions");
 var wins = document.getElementById("wins");
 var losses = document.getElementById("losses");
 var guesses = document.getElementById("numberGuesses");
 var userGuesses = document.getElementById("userGuesses");
+// userGuesses.innerHTML = guessedLetters.join(",");
 
-//You were calling "onekeyup" rather than "onkeyup", so it wasn't working. Watch out for spelling!
 document.onkeyup = function (event) {
     var userGuess = event.key;
     var computerGuess = letters[Math.floor(Math.random() * letters.length)];
@@ -23,6 +21,8 @@ document.onkeyup = function (event) {
     if (userGuess === computerGuess) {
         numWins++; 
     }
+
+    // guessLeft -=1;
 
     else if (guessLeft === 0) {
         numlosses++;
@@ -34,6 +34,17 @@ document.onkeyup = function (event) {
     losses.textContent = "Losses: " + numlosses;
     guesses.textContent = "Number of guesses left: " + guessLeft;
     userGuesses.textContent = "You guessed: " + userGuess;
+
+    // reset (
+    //     numWins();
+    //     numLosses();
+    //     guessLeft();
+
+    // )
+
+    // Psuedocode: Reset needed. The guess counter needs to go down and not be stationary after one guess. 
+    // The user guesses need to show a string of letters prior to reset. 
+    // Attempts to put any of the above pseudocode made it so that the whole game would freeze.
 
 };
 
