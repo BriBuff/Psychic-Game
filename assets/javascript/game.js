@@ -5,7 +5,7 @@ var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 var numWins = 0;
 var numlosses = 0;
 var numberGuessesMax = 9;
-var guessLeft
+var guessLeft, letterGuess
 
 var directions= document.getElementById("directions");
 var wins = document.getElementById("wins");
@@ -21,7 +21,7 @@ document.onkeyup = function (event) {
 
     for (guessLeft = 0; guessLeft < 9; guessLeft++) {
     if (userGuess === computerGuess) {
-        numWins++;
+        numWins++; 
     }
 
     else if (guessLeft === 0) {
