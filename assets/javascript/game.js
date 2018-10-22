@@ -24,11 +24,6 @@ document.onkeyup = function (event) {
         numWins++;
     }
 
-    // if (userGuess !== computerGuess) {
-    //     guessLeft -= 1;
-    // }
-
-
     else if (guessLeft === 0) {
         numlosses++;
     }
