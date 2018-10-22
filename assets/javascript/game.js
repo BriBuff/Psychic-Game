@@ -44,7 +44,7 @@ document.onkeyup = function (event) {
 
     // Psuedocode: Reset needed. The guess counter needs to go down and not be stationary after one guess. 
     // The user guesses need to show a string of letters prior to reset. 
-    // Attempts to put any of the above pseudocode made it so that the whole game would freeze.
+    // Attempts to put any of the above pseudocode made it so that the whole game would freeze. Anything in green is what was tried.
 
 };
 

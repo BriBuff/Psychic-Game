@@ -8,4 +8,4 @@ Rules of the game:
 2. If the user guesses the same letter that the user does, the user wins.
 3. The user has up to 9 guesses before losing the game and starting with a new letter.
 
-Purpose: Manipulation of JavaScript, HTML, CSS to create a game.
+Purpose: Manipulation of JavaScript, HTML, and CSS to create a game.
