@@ -19,17 +19,17 @@ document.onkeyup = function (event) {
     var computerGuess = letters[Math.floor(Math.random() * letters.length)];
     guessLeft = numberGuessesMax;
 
-    for (i = 0; i < 9; i++) {
+    for (guessLeft = 0; guessLeft < 9; guessLeft++) {
     if (userGuess === computerGuess) {
         numWins++;
     }
 
-    else if (userGuess !== computerGuess) {
-        guessLeft -= 1;
-    }
+    // if (userGuess !== computerGuess) {
+    //     guessLeft -= 1;
+    // }
 
 
-    if (guessLeft === 0) {
+    else if (guessLeft === 0) {
         numlosses++;
     }
 
