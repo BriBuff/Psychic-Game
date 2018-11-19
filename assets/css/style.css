@@ -5,6 +5,9 @@ body {
     text-align: center;
 }
 
+#prompt {
+    font-size: 30px;
+}
 .crystalball { 
         border: 7px solid purple; 
         width: 300px;
